@@ -10,8 +10,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
             crossorigin="anonymous">
-        <link rel="stylesheet" href="css/style-common.css">
-        <link rel="stylesheet" href="css/style-header.css">
+        <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/style-images.css">
         <!-- Länka in din/dina css-fil här -->
     </head>
@@ -21,24 +20,82 @@
     <header>
         <!-- Logotype -->
         <div class="container-logo">
-            <img src="images/logo.jpg" alt="Bella Lanterna">
+            <a href="index.html"><img src="images/logo.jpg" alt="Bella Lanterna"></a>
         </div>
 
         <!-- Hidden checkbox for main menu -->
         <input type="checkbox" class="nav_toggle" id="toggle_menu" />
     
         <!-- Hamburger menu icon -->
-        <div id="container-hamburger-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+        <label for="toggle_menu" id="toggle_label">
+            <div id="container-hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </label>
+
+        <!-- First glance Information -->
+        <div class="first-glance-information">
+            <!-- Opening hours -->
+            <table class="opening-hours">
+                <h4>Öppettider</h4>
+                <tr>
+                    <td>Mån-Tors</td>
+                    <td>11.30-21.30</td>
+                </tr>
+                <tr>
+                    <td>Fre</td>
+                    <td>11.30-22.00</td>
+                </tr>
+                <tr>
+                    <td>Lör</td>
+                    <td>12.00-22-00</td>
+                </tr>
+                <tr>
+                    <td>Sön</td>
+                    <td>12.00-20.00</td>
+                </tr>
+            </table>
+            <!-- Contact information -->
+            <ul class="contact-information">
+                <h4>Adress</h4>
+                <li>Norra Järnvägsgatan 6a</li>
+                <li>352 33 Växjö</li>
+                <h4>Telefon</h4>
+                <li>0470-140 50</li>
+            </ul>
         </div>
 
         <!-- Menu -->
         <nav class="container-menu">
-            
+            <ul>
+                <li>Meny
+                    <ul class="mega-menu">
+                        <ul>Pizza
+                            <li><a href="">Vegetariska pizzor</a></li>
+                            <li><a href="">Skaldjurspizzor</a></li>
+                            <li><a href="">Gourmetpizzor</a></li>
+                            <li><a href="">Andra pizzor</a></li>
+                        </ul>
+                        <ul>A la carté
+                            <li><a href="">Antipasti</a></li>
+                            <li><a href="">Griglia a carbone - Äkta kolgrill</a></li>
+                            <li><a href="">Menu di insalate - Sallad</a></li>
+                            <li><a href="">Menu di pasta - Pasta</a></li>
+                            <li><a href="">Plankor</a></li>
+                        </ul>
+                        <li><a href="">Barnmeny</a></li>
+                        <li><a href="">Dessert</a></li>
+                        <li><a href="">Veckans lunch</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Blogg</a></li>
+                <li><a href="">Beställ</a></li>
+            </ul>
         </nav>
+
     </header>
 
 
