@@ -1,0 +1,103 @@
+
+
+.image{
+    position: relative;
+}
+
+.caption{
+    position: absolute;
+    color: white;
+    background-color: rgba(102, 100, 100, 0.6);
+    padding: 0.5em;
+    margin: 0;
+}
+
+.caption p{
+    padding: 0;
+    margin: 0;
+}
+
+.image img{
+    width: 100%;
+    height: auto;
+}
+
+
+/*  ---- Mobile first "grid-image"----- Fallback utan grid-items */
+
+.container-img{
+    background-image: url(https://images.pexels.com/photos/259763/pexels-photo-259763.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    max-height: 600px;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+
+
+@supports (grid-area: auto){
+    .container-img{
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+    }
+
+    .grid-item1{
+        grid-column: 1/4;
+        grid-row: 2/3;
+        opacity: 0.6;
+        background-color: orange;
+    }
+
+    .grid-item2{
+        grid-column: 5/7;
+        grid-row: 1/4;
+        opacity: 0.6;
+        background-color: rgb(214, 112, 52);
+    }
+
+    .grid-item3{
+        grid-column: 1/2;
+        grid-row: 2/7;
+        opacity: 0.6;
+        background-color: rgb(248, 79, 56);
+    }
+
+    .grid-item4{
+        grid-column: 4/9;
+        grid-row: 3/5;
+        opacity: 0.6;
+        background-color: rgba(248, 228, 52, 0.582);
+    }
+
+    .grid-item5{
+        grid-column: 3/5;
+        grid-row: 4/8;
+        opacity: 0.6;
+        background-color: rgb(196, 54, 29);
+    }
+
+    .grid-item6{
+        grid-column: 2/10;
+        grid-row: 7/9;
+        opacity: 0.6;
+        background-color: rgb(150, 95, 7);
+    }
+    .grid-item7{
+        grid-column: 9/10;
+        grid-row: 5/9;
+        opacity: 0.6;
+        background-color: rgb(117, 42, 12);
+    }
+    
+}
+
+
+
+/* ---- Footer ---- */
+.page-foot{
+    text-align: center;
+    margin: 1em;
+}
