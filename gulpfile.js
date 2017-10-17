@@ -22,15 +22,15 @@ gulp.task('hello', function() {
 gulp.task('browserSync', function() {
   browserSync({
     server: {
-      baseDir: 'HTMLCSS3_SEO/GruppTre'
+      baseDir: 'site'
     }
   })
 })
 
 gulp.task('sass', function() {
-  return gulp.src('HTMLCSS3_SEO/GruppTre/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
+  return gulp.src('site/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
     .pipe(sass().on('error', sass.logError)) // Passes it through a gulp-sass, log errors to console
-    .pipe(gulp.dest('HTMLCSS3_SEO/GruppTre/css')) // Outputs it in the css folder
+    .pipe(gulp.dest('site/css')) // Outputs it in the css folder
     .pipe(browserSync.reload({ // Reloading with Browser Sync
       stream: true
     }));
@@ -38,9 +38,9 @@ gulp.task('sass', function() {
 
 // Watchers
 gulp.task('watch', function() {
-  gulp.watch('HTMLCSS3_SEO/GruppTre/scss/**/*.scss', ['sass']);
-  gulp.watch('HTMLCSS3_SEO/GruppTre/*.html', browserSync.reload);
-  gulp.watch('HTMLCSS3_SEO/GruppTre/js/**/*.js', browserSync.reload);
+  gulp.watch('site/scss/**/*.scss', ['sass']);
+  gulp.watch('site/*.html', browserSync.reload);
+  gulp.watch('site/js/**/*.js', browserSync.reload);
 })
 
 // Optimization Tasks 
@@ -49,7 +49,7 @@ gulp.task('watch', function() {
 // Optimizing CSS and JavaScript 
 gulp.task('useref', function() {
 
-  return gulp.src('HTMLCSS3_SEO/GruppTre/*.html')
+  return gulp.src('site/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
@@ -58,7 +58,7 @@ gulp.task('useref', function() {
 
 // Optimizing Images 
 gulp.task('images', function() {
-  return gulp.src('HTMLCSS3_SEO/GruppTre/images/**/*.+(png|jpg|jpeg|gif|svg)')
+  return gulp.src('site/images/**/*.+(png|jpg|jpeg|gif|svg)')
     // Caching images that ran through imagemin
     .pipe(cache(imagemin({
       interlaced: true,
@@ -68,7 +68,7 @@ gulp.task('images', function() {
 
 // Copying fonts 
 gulp.task('fonts', function() {
-  return gulp.src('HTMLCSS3_SEO/GruppTre/fonts/**/*')
+  return gulp.src('site/fonts/**/*')
     .pipe(gulp.dest('dist/fonts'))
 })
 
