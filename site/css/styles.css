@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* Justera färgvalen */
+/*%btn{
+	width: 200px;
+  height: 200px;
+	border-radius: 50%;
+	color:white;
+ text-decoration:none;
+ padding:5%;
+margin: 10px;	
+ font-family: 'Poiret One', cursive;
+ font-size:1.5em;
+}
+
+Placeholder, en sorts mall. Skriv en egen placeholder som passar för vår sida.
+
+*/
+@media (min-width: 60em) {
+  .site {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 400px) 100px;
+    grid-template-areas: "img head head" "img gallery gallery" "img gallery gallery" ". page-foot ."; } }
+
+@media (min-width: 60em) {
+  .container-header {
+    grid-area: head;
+    height: 300px; } }
+
+@media (min-width: 60em) {
+  .container-img {
+    grid-area: img; } }
+
+@media (min-width: 60em) {
+  .container-gallery {
+    grid-area: gallery; } }
+
+@media (min-width: 60em) {
+  .page-foot {
+    grid-area: page-foot; } }
+
+/* Justerar bilderna i olika breakpoints */
+@media (min-width: 40em) {
+  .container-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); } }
+
+.image {
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  background-color: #d6d6d6;
+  border-radius: 5px; }
+  @media (min-width: 40em) {
+    .image {
+      background-color: white;
+      border: 2px solid #adacac; } }
+  .image img {
+    width: 100%;
+    height: auto; }
+
+.image:nth-child(2) {
+  grid-row: span 2;
+  grid-column: span 2; }
+
+.caption {
+  position: absolute;
+  color: white;
+  background-color: rgba(102, 100, 100, 0.6);
+  padding: 0.5em;
+  margin: 0;
+  width: 86%; }
+  .caption p {
+    padding: 0;
+    margin: 0; }
+
+/*  ---- Mobile first "grid-image"----- Fallback utan grid-items */
+.container-img {
+  background-image: url(https://images.pexels.com/photos/259763/pexels-photo-259763.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  overflow: hidden; }
+  @media (min-width: 40em) {
+    .container-img {
+      height: 1000px;
+      width: auto; } }
+
+@supports (grid-area: auto) {
+  .container-img {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr); }
+  .grid-item {
+    opacity: 0.6; }
+  .grid-item:nth-child(1) {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    background-color: orange; }
+  .grid-item:nth-child(2) {
+    grid-column: 5/7;
+    grid-row: 1/4;
+    background-color: #d67034; }
+  .grid-item:nth-child(3) {
+    grid-column: 1/2;
+    grid-row: 2/7;
+    background-color: #f84f38; }
+  .grid-item:nth-child(4) {
+    grid-column: 4/9;
+    grid-row: 3/5;
+    background-color: rgba(248, 228, 52, 0.582); }
+  .grid-item:nth-child(5) {
+    grid-column: 3/5;
+    grid-row: 4/8;
+    background-color: #c4361d; }
+  .grid-item:nth-child(6) {
+    grid-column: 2/10;
+    grid-row: 7/9;
+    background-color: #965f07; }
+  .grid-item:nth-child(7) {
+    grid-column: 9/10;
+    grid-row: 5/9;
+    background-color: #752a0c; } }
+
+/* ---- Footer ---- */
+.page-foot {
+  text-align: center;
+  margin: 1em; }

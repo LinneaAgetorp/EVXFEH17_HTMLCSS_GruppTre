@@ -1,0 +1,36 @@
+.site{
+    @include respond-to("large"){
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 400px) 100px;
+    grid-template-areas: "img head head" "img gallery gallery" "img gallery gallery" ". page-foot .";
+    }
+}
+
+.container-header{
+    @include respond-to("large"){
+    grid-area: head;
+    height: 300px;
+    }
+}
+
+.container-img{
+    @include respond-to("large"){
+    grid-area: img;
+    }
+}
+
+.container-gallery{
+    @include respond-to("large"){
+    grid-area: gallery;
+    }
+}
+
+.page-foot{
+    @include respond-to("large"){
+    grid-area: page-foot;
+    }
+}
+
+
+
