@@ -9,10 +9,10 @@ $breakpoints:(
 $color: (
     main: rgb(204, 88, 80),
     bright: rgb(243, 241, 241),
-    dark: rgb(99, 66, 66),
+    dark: rgb(99, 66, 66)
 ) !default;
 
 $text: (
-    body: unquote(""Arial", "sans-serif""),
-    /* fyll på mer text-inställningar */
+    body: ("Arial"),
+    /* fyll på/ändra text-inställningar */
 )
