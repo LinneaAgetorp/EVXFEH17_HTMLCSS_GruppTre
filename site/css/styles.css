@@ -12,30 +12,30 @@ margin: 10px;
  font-size:1.5em;
 }
 
-Placeholder, en sorts mall. Skriv en egen placeholder som passar för vår sida.
+En beställ-knapp kanske?
 
 */
+.image {
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  background-color: #cc5850;
+  border-radius: 5px;
+  min-height: 170px; }
+
 @media (min-width: 60em) {
   .site {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 400px) 100px;
-    grid-template-areas: "img head head" "img gallery gallery" "img gallery gallery" ". page-foot ."; } }
-
-@media (min-width: 60em) {
+    grid-template-areas: "img head head" "img gallery gallery" "img gallery gallery" ". page-foot ."; }
   .container-header {
     grid-area: head;
-    height: 300px; } }
-
-@media (min-width: 60em) {
+    height: 300px; }
   .container-img {
-    grid-area: img; } }
-
-@media (min-width: 60em) {
+    grid-area: img; }
   .container-gallery {
-    grid-area: gallery; } }
-
-@media (min-width: 60em) {
+    grid-area: gallery; }
   .page-foot {
     grid-area: page-foot; } }
 
@@ -45,21 +45,15 @@ Placeholder, en sorts mall. Skriv en egen placeholder som passar för vår sida.
     display: grid;
     grid-template-columns: repeat(3, 1fr); } }
 
-.image {
-  position: relative;
-  padding: 10px;
-  margin: 10px;
-  background-color: #c5c3c3;
-  border-radius: 5px;
-  min-height: 170px; }
-  @media (min-width: 40em) {
-    .image {
-      background-color: white;
-      border: 2px solid #adacac; } }
-  .image img {
-    width: 100%;
-    height: auto;
-    min-height: 140px; }
+@media (min-width: 40em) {
+  .image {
+    background-color: white;
+    border: 2px solid #adacac; } }
+
+.image img {
+  width: 100%;
+  height: auto;
+  min-height: 140px; }
 
 .image:nth-child(2) {
   grid-row: span 2;
@@ -68,7 +62,7 @@ Placeholder, en sorts mall. Skriv en egen placeholder som passar för vår sida.
 .caption {
   position: absolute;
   color: white;
-  background-color: rgba(102, 100, 100, 0.6);
+  background-color: rgba(97, 99, 99, 0.7);
   padding: 0.5em;
   margin: 0;
   width: 85%; }
@@ -77,9 +71,10 @@ Placeholder, en sorts mall. Skriv en egen placeholder som passar för vår sida.
       width: 78%; } }
   .caption p {
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    font-family: Arial, sans-serif; }
 
-/*  ---- Mobile first "grid-image"----- Fallback utan grid-items */
+/*  ---- Mobile first / Fallback "grid-image"-----  */
 .container-img {
   background-image: url(https://images.pexels.com/photos/259763/pexels-photo-259763.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
   background-repeat: no-repeat;

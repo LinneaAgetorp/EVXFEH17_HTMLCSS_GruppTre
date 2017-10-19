@@ -6,13 +6,14 @@ $breakpoints:(
     
 
 /* Justera färgvalen */
-$color: (
+$colors: (
     main: rgb(204, 88, 80),
     bright: rgb(243, 241, 241),
+    medium-grey: rgba(97, 99, 99, 0.7),
     dark: rgb(99, 66, 66)
 ) !default;
 
 $text: (
-    body: ("Arial"),
-    /* fyll på/ändra text-inställningar */
+    body: unquote("Arial, sans-serif"),
+/* fyll på/ändra text-inställningar? */
 )
