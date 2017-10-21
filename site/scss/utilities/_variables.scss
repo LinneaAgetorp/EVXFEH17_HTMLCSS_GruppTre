@@ -1,13 +1,18 @@
-/* sass map för breakpoints*/
-$breakpoints: (
-    "small": (min-width: 40em), /* Tablet */
-    "medium": (min-width: 60em) /* Medium-sized desktop */
-  )
-  !default;
+$breakpoints:(
+"small": (min-width: 30em),
+"medium": (min-width: 40em),
+"large": (min-width: 60em)
+) !default;
+    
 
-$colors: (
-  darkgreen1: rgb(34, 158, 34),
-  darkgreen2: rgb(0, 130, 0),
-  lightgreen1: rgb(71, 218, 71),
-  lightgreen2: rgb(77, 255, 77)
-);
+/* Justera färgvalen */
+$color: (
+    main: rgb(204, 88, 80),
+    bright: rgb(243, 241, 241),
+    dark: rgb(99, 66, 66),
+) !default;
+
+$text: (
+    body: unquote(""Arial", "sans-serif""),
+    /* fyll på mer text-inställningar */
+)

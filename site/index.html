@@ -2,22 +2,23 @@
 <html lang="sv">
 
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Grids</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-            crossorigin="anonymous">
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/style-images.css">
-        <!-- Länka in din/dina css-fil här -->
-    </head>
-<body>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Grids</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <!-- Build:css css/styles.min.css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--endbuild -->
+</head>
 
+<body class="site">
+    
     <!-- Header -->
-    <header>
+    <header class="container-header">
         <!-- Logotype -->
         <div class="container-logo">
             <a href="index.html">
@@ -27,7 +28,7 @@
 
         <!-- Hidden checkbox for hamburger menu icon -->
         <input type="checkbox" id="toggle-menu" />
-    
+
         <!-- Hamburger menu icon -->
         <div id="container-hamburger-icon">
             <label for="toggle-menu" id="toggle-label">
@@ -43,28 +44,59 @@
         <!-- Menu -->
         <nav class="container-menu">
             <ul>
-                <li><a href="">Meny</a>
+                <li>
+                    <a href="">Meny</a>
                     <ul class="mega-menu">
-                        <ul><a href="">Pizza</a>
-                            <li><a href="">Vegetariska pizzor</a></li>
-                            <li><a href="">Skaldjurspizzor</a></li>
-                            <li><a href="">Gourmetpizzor</a></li>
-                            <li><a href="">Andra pizzor</a></li>
+                        <ul>
+                            <a href="">Pizza</a>
+                            <li>
+                                <a href="">Vegetariska pizzor</a>
+                            </li>
+                            <li>
+                                <a href="">Skaldjurspizzor</a>
+                            </li>
+                            <li>
+                                <a href="">Gourmetpizzor</a>
+                            </li>
+                            <li>
+                                <a href="">Andra pizzor</a>
+                            </li>
                         </ul>
-                        <ul><a href="">A la carté</a>
-                            <li><a href="">Antipasti</a></li>
-                            <li><a href="">Griglia a carbone - Äkta kolgrill</a></li>
-                            <li><a href="">Menu di insalate - Sallad</a></li>
-                            <li><a href="">Menu di pasta - Pasta</a></li>
-                            <li><a href="">Plankor</a></li>
+                        <ul>
+                            <a href="">A la carté</a>
+                            <li>
+                                <a href="">Antipasti</a>
+                            </li>
+                            <li>
+                                <a href="">Griglia a carbone - Äkta kolgrill</a>
+                            </li>
+                            <li>
+                                <a href="">Menu di insalate - Sallad</a>
+                            </li>
+                            <li>
+                                <a href="">Menu di pasta - Pasta</a>
+                            </li>
+                            <li>
+                                <a href="">Plankor</a>
+                            </li>
                         </ul>
-                        <li><a href="">Barnmeny</a></li>
-                        <li><a href="">Dessert</a></li>
-                        <li><a href="">Veckans lunch</a></li>
+                        <li>
+                            <a href="">Barnmeny</a>
+                        </li>
+                        <li>
+                            <a href="">Dessert</a>
+                        </li>
+                        <li>
+                            <a href="">Veckans lunch</a>
+                        </li>
                     </ul>
                 </li>
-                <li><a href="">Blogg</a></li>
-                <li><a href="">Beställ</a></li>
+                <li>
+                    <a href="">Blogg</a>
+                </li>
+                <li>
+                    <a href="">Beställ</a>
+                </li>
             </ul>
         </nav>
 
@@ -94,12 +126,18 @@
             <div class="contact-information">
                 <table class="address">
                     <h4>Adress</h4>
-                    <tr><td>Norra Järnvägsgatan 6a</td></tr>
-                    <tr><td>352 33 Växjö</td></tr>
+                    <tr>
+                        <td>Norra Järnvägsgatan 6a</td>
+                    </tr>
+                    <tr>
+                        <td>352 33 Växjö</td>
+                    </tr>
                 </table>
                 <table>
                     <h4>Telefon</h4>
-                    <tr><td>0470-140 50</td></tr>
+                    <tr>
+                        <td>0470-140 50</td>
+                    </tr>
                 </table>
             </div>
         </div>
@@ -111,44 +149,44 @@
     <section class="container-gallery">
         <figure class="image">
             <figcaption class="caption">
-                <p>Beskrivning</p>
+                <p>Färska grönsaker är bästa råvarorna</p>
             </figcaption>
             <img src="https://images.pexels.com/photos/533360/pexels-photo-533360.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
         </figure>
 
         <figure class="image">
             <figcaption class="caption">
-                <p>Beskrivning</p>
+                <p>Vegetariana 50/50</p>
             </figcaption>
-            <img src="https://images.pexels.com/photos/533360/pexels-photo-533360.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
+            <img src="https://images.pexels.com/photos/208537/pexels-photo-208537.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb">
         </figure>
 
         <figure class="image">
             <figcaption class="caption">
-                <p>Beskrivning</p>
+                <p>Fyndade en Hello Kitty-skärbräda på loppis</p>
             </figcaption>
-            <img src="https://images.pexels.com/photos/533360/pexels-photo-533360.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
+            <img src="https://images.pexels.com/photos/367915/pexels-photo-367915.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb">
         </figure>
 
         <figure class="image">
             <figcaption class="caption">
-                <p>Beskrivning</p>
+                <p>Ny topping på Kalles Special; currystekt tofu</p>
             </figcaption>
-            <img src="https://images.pexels.com/photos/533360/pexels-photo-533360.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
+            <img src="https://images.pexels.com/photos/578009/pexels-photo-578009.jpeg?h=350&auto=compress&cs=tinysrgb">
         </figure>
 
         <figure class="image">
             <figcaption class="caption">
-                <p>Beskrivning</p>
+                <p>Helgens vinnare, med extra mozzarella</p>
             </figcaption>
-            <img src="https://images.pexels.com/photos/533360/pexels-photo-533360.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
+            <img src="https://images.pexels.com/photos/162918/pizza-cheese-margarita-homemade-162918.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb">
         </figure>
 
         <figure class="image">
             <figcaption class="caption">
-                <p>Beskrivning</p>
+                <p>Deg-Prepp!</p>
             </figcaption>
-            <img src="https://images.pexels.com/photos/533360/pexels-photo-533360.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
+            <img src="https://images.pexels.com/photos/9510/food-pizza-kitchen-recipe.jpg?h=350&dpr=2&auto=compress&cs=tinysrgb">
         </figure>
     </section>
     <!-- End Gallery -->
@@ -158,13 +196,13 @@
     <!-- "Grid-image" --- -->
 
     <div class="container-img">
-        <div class="grid-item1"></div>
-        <div class="grid-item2"></div>
-        <div class="grid-item3"></div>
-        <div class="grid-item4"></div>
-        <div class="grid-item5"></div>
-        <div class="grid-item6"></div>
-        <div class="grid-item7"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
     </div>
 
     <!-- Footer -->
