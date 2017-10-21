@@ -1,0 +1,10 @@
+/* Logo container */
+.container-logo {
+
+    img {
+        /* Remove bottom space */
+        vertical-align: bottom;
+        /* Make the image fill out top screen width */
+        width: 100%;
+    }
+}

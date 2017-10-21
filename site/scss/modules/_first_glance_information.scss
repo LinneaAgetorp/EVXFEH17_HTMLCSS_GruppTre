@@ -1,0 +1,19 @@
+.first-glance-information {
+  font-family: "Pacifico", cursive;
+  text-align: center;
+
+  /* Make tables inline elements so centering works */
+  table {
+    display: inline;
+  }
+}
+
+.opening-hours {
+  td:nth-child(1) {
+    text-align: left;
+  }
+  
+  td:nth-child(2) {
+    text-align: right;
+  }
+}
