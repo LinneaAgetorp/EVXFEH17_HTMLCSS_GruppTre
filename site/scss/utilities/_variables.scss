@@ -1,18 +1,19 @@
+/* Breakpoint-schema */
 $breakpoints:(
-"small": (min-width: 30em),
-"medium": (min-width: 40em),
-"large": (min-width: 60em)
+    "small": (min-width: 30em),
+    "medium": (min-width: 40em),
+    "large": (min-width: 60em)
 ) !default;
     
-
-/* Justera färgvalen */
+/* Färgschema */
 $color: (
     main: rgb(204, 88, 80),
     bright: rgb(243, 241, 241),
     dark: rgb(99, 66, 66),
 ) !default;
 
+/* Fontschema */
 $text: (
-    body: unquote(""Arial", "sans-serif""),
-    /* fyll på mer text-inställningar */
+    body: ("Arial", "sans-serif"),
+    stylish: ("Pacifico", cursiv)
 )

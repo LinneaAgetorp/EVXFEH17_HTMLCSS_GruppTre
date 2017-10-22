@@ -1,12 +1,30 @@
 @charset "UTF-8";
 /* Include all utilities */
 /* Variables */
-/* sass map för breakpoints*/
-/* Mixinx */
+/* Breakpoint-schema */
+/* Färgschema */
+/* Fontschema */
+/* Mixins */
 /* sass breakpoint mixin */
 /* Custom Fonts */
+/* Google font: Pacifico */
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 /* Helpers */
+/*%btn{
+	width: 200px;
+  height: 200px;
+	border-radius: 50%;
+	color:white;
+ text-decoration:none;
+ padding:5%;
+margin: 10px;	
+ font-family: 'Poiret One', cursive;
+ font-size:1.5em;
+}
+
+Placeholder, en sorts mall. Skriv en egen placeholder som passar för vår sida.
+
+*/
 /* Include all base styles */
 /* Normalize the css */
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -418,7 +436,33 @@ ul, li {
   margin: 0; }
 
 /* Include all layout */
+/* Site layout */
+@media (min-width: 60em) {
+  .site {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 400px) 100px;
+    grid-template-areas: "img head head" "img gallery gallery" "img gallery gallery" ". page-foot ."; } }
+
+@media (min-width: 60em) {
+  .container-header {
+    grid-area: head;
+    height: 300px; } }
+
+@media (min-width: 60em) {
+  .container-img {
+    grid-area: img; } }
+
+@media (min-width: 60em) {
+  .container-gallery {
+    grid-area: gallery; } }
+
+@media (min-width: 60em) {
+  .page-foot {
+    grid-area: page-foot; } }
+
 /* Include all module style and layout */
+/* Logoptype */
 /* Logo container */
 .container-logo img {
   /* Remove bottom space */
@@ -426,6 +470,7 @@ ul, li {
   /* Make the image fill out top screen width */
   width: 100%; }
 
+/* Hamburger icon */
 /* Checkbox hack */
 #toggle-menu {
   /* Hide checkbox */
@@ -448,6 +493,7 @@ ul, li {
         width: 0%;
         left: 50%; }
 
+/* Container which can position the hamburger icon */
 #container-hamburger-icon {
   padding: 1em;
   transition: 0.5s ease-in-out; }
@@ -480,8 +526,9 @@ ul, li {
     #hamburger-icon span:nth-child(4) {
       top: 36px; }
 
+/* Menu */
 nav {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursiv;
   background: white;
   line-height: 2em;
   transition: 0.5s ease-in-out;
@@ -564,58 +611,23 @@ input#toggle-menu:checked ~ nav {
     nav ul li:hover ul.megamenu {
       top: 100%; } }
 
+/* First glance info = opening hours + contact info */
+/* First glance information */
 .first-glance-information {
-  font-family: "Pacifico", cursive;
+  font-family: "Pacifico", cursiv;
   text-align: center;
-  /* Make tables inline elements so centering works */ }
+  /* Make tables centered too */ }
   .first-glance-information table {
     display: inline; }
 
+/* Opening hours */
 .opening-hours td:nth-child(1) {
   text-align: left; }
 
 .opening-hours td:nth-child(2) {
   text-align: right; }
-/* Justera färgvalen */
-/*%btn{
-	width: 200px;
-  height: 200px;
-	border-radius: 50%;
-	color:white;
- text-decoration:none;
- padding:5%;
-margin: 10px;	
- font-family: 'Poiret One', cursive;
- font-size:1.5em;
-}
 
-Placeholder, en sorts mall. Skriv en egen placeholder som passar för vår sida.
-
-*/
-@media (min-width: 60em) {
-  .site {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 400px) 100px;
-    grid-template-areas: "img head head" "img gallery gallery" "img gallery gallery" ". page-foot ."; } }
-
-@media (min-width: 60em) {
-  .container-header {
-    grid-area: head;
-    height: 300px; } }
-
-@media (min-width: 60em) {
-  .container-img {
-    grid-area: img; } }
-
-@media (min-width: 60em) {
-  .container-gallery {
-    grid-area: gallery; } }
-
-@media (min-width: 60em) {
-  .page-foot {
-    grid-area: page-foot; } }
-
+/* Gallery */
 /* Justerar bilderna i olika breakpoints */
 @media (min-width: 40em) {
   .container-gallery {

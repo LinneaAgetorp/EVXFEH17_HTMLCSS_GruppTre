@@ -1,19 +1,21 @@
+/* First glance information */
 .first-glance-information {
-  font-family: "Pacifico", cursive;
-  text-align: center;
+    font-family: map-get($text, stylish);
+    text-align: center;
 
-  /* Make tables inline elements so centering works */
-  table {
-    display: inline;
-  }
+    /* Make tables centered too */
+    table {
+        display: inline;
+    }
 }
 
+/* Opening hours */
 .opening-hours {
-  td:nth-child(1) {
-    text-align: left;
-  }
-  
-  td:nth-child(2) {
-    text-align: right;
-  }
+    td:nth-child(1) {
+        text-align: left;
+    }
+
+    td:nth-child(2) {
+        text-align: right;
+    }
 }

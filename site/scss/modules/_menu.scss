@@ -1,122 +1,122 @@
 nav {
-  font-family: 'Pacifico', cursive;
-  background: white;
-  line-height: 2em;
-  transition: 0.5s ease-in-out;
+    font-family: map-get($text, stylish);
+    background: white;
+    line-height: 2em;
+    transition: 0.5s ease-in-out;
 
-  /* Hide menu as default */
-  & > ul {
-    display: none;
-    position: relative;
-    width: 100%;
+    /* Hide menu as default */
+    & > ul {
+        display: none;
+        position: relative;
+        width: 100%;
 
-    /* Main menu text */
-    & > li > a {
-      color: gold;
+        /* Main menu text */
+        & > li > a {
+            color: gold;
+        }
+
+        /* Mega menu */
+        .mega-menu {
+            /* Mega menu titles */
+            & > * > a {
+                color: goldenrod;
+                padding-left: 2em;
+            }
+
+            /* Menu links */
+            ul li a {
+                color: whitesmoke;
+                padding-left: 3em;
+            }
+        }
+
+        /* List item styling */
+        a {
+            display: block;
+            padding-left: 1em;
+
+            &:hover {
+                background-color: rgb(194, 16, 16);
+            }
+        }
     }
-
-    /* Mega menu */
-    .mega-menu {
-      /* Mega menu titles */
-      & > * > a {
-        color: goldenrod;
-        padding-left: 2em;
-      }
-
-      /* Menu links */
-      ul li a {
-        color: whitesmoke;
-        padding-left: 3em;
-      }
-    }
-
-    /* List item styling */
-    a {
-      display: block;
-      padding-left: 1em;
-
-      &:hover {
-        background-color: rgb(194, 16, 16);
-      }
-    }
-  }
 }
 
 /* Show full menu if checked checkbox */
 input#toggle-menu:checked ~ nav {
-  background: black;
+    background: black;
 
-  & > ul {
-    display: block;
-  }
+    & > ul {
+        display: block;
+    }
 }
 
 /* Tablet styling */
-@include respond-to("small") {
-  nav {
-    font-size: 1em;
-    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 1);
+@include respond-to("medium") {
+    nav {
+        font-size: 1em;
+        box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 1);
 
-    /* Make menu flex */
-    & > ul {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-around;
-      max-width: 75em;
-      margin: 0 auto;
-      padding: 0;
+        /* Make menu flex */
+        & > ul {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            max-width: 75em;
+            margin: 0 auto;
+            padding: 0;
 
-      & > li > a {
-        padding: 15px 25px;
-      }
-    }
-
-    a {
-      display: block;
-    }
-
-    ul li {
-      transition: 0.5s;
-    }
-
-    /* Megamenu styling */
-    ul.megamenu {
-      position: absolute;
-      display: flex;
-      flex-flow: row wrap;
-      max-width: 1200px;
-      top: -900px;
-      left: 0;
-      padding: 40px 40px 0 40px;
-      text-align: left;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-      z-index: 1;
-
-      /* The megamenu is divided on three columns */
-      ul {
-        flex: 1 1 33%;
-        margin-bottom: 20px;
-        color: #000;
-        box-shadow: none;
-
-        li {
-          display: block;
-
-          a {
-            margin-top: 0.625em;
-            transition: 0.5s;
-            padding-left: 0;
-          }
+            & > li > a {
+                padding: 15px 25px;
+            }
         }
-      }
 
-      h4 {
-        margin-bottom: 1em;
-      }
-    }
+        a {
+            display: block;
+        }
 
-    ul li:hover ul.megamenu {
-      top: 100%;
+        ul li {
+            transition: 0.5s;
+        }
+
+        /* Megamenu styling */
+        ul.megamenu {
+            position: absolute;
+            display: flex;
+            flex-flow: row wrap;
+            max-width: 1200px;
+            top: -900px;
+            left: 0;
+            padding: 40px 40px 0 40px;
+            text-align: left;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+
+            /* The megamenu is divided on three columns */
+            ul {
+                flex: 1 1 33%;
+                margin-bottom: 20px;
+                color: #000;
+                box-shadow: none;
+
+                li {
+                    display: block;
+
+                    a {
+                        margin-top: 0.625em;
+                        transition: 0.5s;
+                        padding-left: 0;
+                    }
+                }
+            }
+
+            h4 {
+                margin-bottom: 1em;
+            }
+        }
+
+        ul li:hover ul.megamenu {
+            top: 100%;
+        }
     }
-  }
 }
