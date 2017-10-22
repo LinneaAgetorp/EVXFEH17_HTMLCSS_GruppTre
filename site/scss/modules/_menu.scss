@@ -86,7 +86,7 @@ input#toggle-menu:checked ~ nav {
             display: flex;
             flex-flow: row wrap;
             max-width: 1200px;
-            top: -900px;
+            top: -1000px;
             left: 0;
             padding: 20px;
             text-align: left;
@@ -96,7 +96,7 @@ input#toggle-menu:checked ~ nav {
             /* The megamenu is divided on three columns */
             ul {
                 flex: 1 1 50%;
-                margin-bottom: 20px;
+                margin-bottom: 1em;
                 color: #000;
                 box-shadow: none;
 
@@ -114,6 +114,21 @@ input#toggle-menu:checked ~ nav {
 
         ul li:hover ul.mega-menu {
             top: 100%;
+        }
+    }
+}
+
+/* Desktop styling */
+@include respond-to("large") {
+    nav > ul {
+        justify-content: center;
+
+        & > li {
+            position: relative;
+
+            .mega-menu {
+                width: 600px;
+            }
         }
     }
 }

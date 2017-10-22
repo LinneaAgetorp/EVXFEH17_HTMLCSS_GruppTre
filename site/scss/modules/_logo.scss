@@ -18,3 +18,23 @@
         justify-content: center;
     }
 }
+
+/* Desktop styling */
+@include respond-to("large") {
+    /* Logo container */
+    .container-logo {
+        $side: 280px;
+
+        position: relative;
+        background: black;
+        border: 10px solid goldenrod;
+        border-radius: $side/2;
+        width: $side;
+        height: $side;
+        padding: 1em;
+        transform: rotate(-20deg);
+        z-index: 1;
+        top: 400px;
+        left: -$side/2;
+    }
+}

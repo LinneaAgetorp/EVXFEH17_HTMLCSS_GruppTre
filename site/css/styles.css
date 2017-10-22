@@ -441,13 +441,13 @@ ul, li {
   .site {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 400px) 100px;
-    grid-template-areas: "img head head" "img gallery gallery" "img gallery gallery" ". page-foot ."; } }
+    grid-template-rows: auto auto 50px;
+    grid-template-areas: "img head head"  "img gallery gallery"  ". page-foot ."; } }
 
 @media (min-width: 60em) {
   .container-header {
     grid-area: head;
-    height: 300px; } }
+    align-self: start; } }
 
 @media (min-width: 60em) {
   .container-img {
@@ -477,6 +477,22 @@ ul, li {
     display: flex;
     align-items: center;
     justify-content: center; } }
+
+/* Desktop styling */
+@media (min-width: 60em) {
+  /* Logo container */
+  .container-logo {
+    position: relative;
+    background: black;
+    border: 10px solid goldenrod;
+    border-radius: 140px;
+    width: 280px;
+    height: 280px;
+    padding: 1em;
+    transform: rotate(-20deg);
+    z-index: 1;
+    top: 400px;
+    left: -140px; } }
 
 /* Hamburger icon */
 /* Checkbox hack */
@@ -602,7 +618,7 @@ input#toggle-menu:checked ~ nav {
       display: flex;
       flex-flow: row wrap;
       max-width: 1200px;
-      top: -900px;
+      top: -1000px;
       left: 0;
       padding: 20px;
       text-align: left;
@@ -612,7 +628,7 @@ input#toggle-menu:checked ~ nav {
       /* Links in mega menu */ }
       nav ul.mega-menu ul {
         flex: 1 1 50%;
-        margin-bottom: 20px;
+        margin-bottom: 1em;
         color: #000;
         box-shadow: none; }
         nav ul.mega-menu ul li a {
@@ -621,6 +637,15 @@ input#toggle-menu:checked ~ nav {
         padding-left: .5em; }
     nav ul li:hover ul.mega-menu {
       top: 100%; } }
+
+/* Desktop styling */
+@media (min-width: 60em) {
+  nav > ul {
+    justify-content: center; }
+    nav > ul > li {
+      position: relative; }
+      nav > ul > li .mega-menu {
+        width: 600px; } }
 
 /* First glance info = opening hours + contact info */
 /* First glance information */
@@ -648,6 +673,18 @@ input#toggle-menu:checked ~ nav {
   .first-glance-information {
     border: 10px ridge black;
     border-radius: 30px;
+    /* Tables title */ }
+    .first-glance-information h4 {
+      margin-bottom: .4em; }
+  /* Opening hours */
+  .opening-hours h4 {
+    margin-bottom: 2em; } }
+
+/* Desktop styling */
+@media (min-width: 60em) {
+  /* First glance information */
+  .first-glance-information {
+    margin: 30px 30px 0px;
     /* Tables title */ }
     .first-glance-information h4 {
       margin-bottom: .4em; }
@@ -771,3 +808,22 @@ input#toggle-menu:checked ~ nav {
     .container-header .container-menu {
       grid-row: 2;
       grid-column: 2; } }
+
+/* Desktop view */
+@media (min-width: 60em) {
+  /* Header */
+  .container-header {
+    /* Layout */
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    /* First glance information */
+    /* Menu bar */ }
+    .container-header .first-glance-information {
+      grid-row: 1;
+      grid-column: 1;
+      display: flex;
+      justify-content: space-around;
+      background: white; }
+    .container-header .container-menu {
+      grid-row: 2;
+      grid-column: 1; } }
