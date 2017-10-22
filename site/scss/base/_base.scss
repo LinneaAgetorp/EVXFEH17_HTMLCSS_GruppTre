@@ -1,0 +1,19 @@
+/* Setting on every element */
+* {
+    box-sizing: border-box;
+}
+
+/* Remove underline on links */
+a {
+    text-decoration: none;
+}
+
+/* Remove list bullets */
+ul {
+    list-style-type: none;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+}

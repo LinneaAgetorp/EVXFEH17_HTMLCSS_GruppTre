@@ -1,0 +1,49 @@
+/* First glance information */
+.first-glance-information {
+    font-family: map-get($text, stylish);
+    padding-bottom: 1em;
+    text-align: center;
+
+    /* Tables title */
+    h4 {
+        margin-bottom: .5em;
+    }
+
+    /* Make tables centered too */
+    table {
+        display: inline;
+    }
+}
+
+/* Opening hours */
+.opening-hours {
+    td:nth-child(1) {
+        text-align: left;
+    }
+
+    td:nth-child(2) {
+        text-align: right;
+    }
+}
+
+/* Tablet styling */
+@include respond-to("medium") {
+
+    /* First glance information */
+    .first-glance-information {
+        border: 10px ridge black;
+        border-radius: 30px;
+
+        /* Tables title */
+        h4 {
+            margin-bottom: .4em;
+        }
+    }
+
+    /* Opening hours */
+    .opening-hours {
+        h4 {
+            margin-bottom: 2em;
+        }
+    }
+}

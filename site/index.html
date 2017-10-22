@@ -1,21 +1,156 @@
+<!DOCTYPE html>
+<html lang="sv">
+
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Grids</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-            crossorigin="anonymous">
-        <!-- Build:css css/styles.min.css -->
-        <link rel="stylesheet" href="css/styles.css">
-        <!--endbuild -->
-    </head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Grids</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <!-- Build:css css/styles.min.css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--endbuild -->
+</head>
 
 <body class="site">
 
+    <!-- Header -->
     <header class="container-header">
-        header - placeholder
+        <!-- Logotype -->
+        <div class="container-logo">
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="Ristorante Bella Lanterna" />
+            </a>
+        </div>
+
+        <!-- Hidden checkbox for hamburger menu icon -->
+        <input type="checkbox" id="toggle-menu" />
+
+        <!-- Hamburger menu icon -->
+        <div id="container-hamburger-icon">
+            <label for="toggle-menu" id="toggle-label">
+                <div id="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </label>
+        </div>
+
+        <!-- Menu -->
+        <nav class="container-menu">
+            <ul>
+                <li>
+                    <a href="">Meny</a>
+                    <ul class="mega-menu">
+                        <ul>
+                            <a href="">Pizza</a>
+                            <li>
+                                <a href="">Vegetariska pizzor</a>
+                            </li>
+                            <li>
+                                <a href="">Skaldjurspizzor</a>
+                            </li>
+                            <li>
+                                <a href="">Gourmetpizzor</a>
+                            </li>
+                            <li>
+                                <a href="">Andra pizzor</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <a href="">A la carté</a>
+                            <li>
+                                <a href="">Antipasti</a>
+                            </li>
+                            <li>
+                                <a href="">Griglia a carbone - Äkta kolgrill</a>
+                            </li>
+                            <li>
+                                <a href="">Menu di insalate - Sallad</a>
+                            </li>
+                            <li>
+                                <a href="">Menu di pasta - Pasta</a>
+                            </li>
+                            <li>
+                                <a href="">Plankor</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <a href="">Barnmeny</a>
+                        </ul>
+                        <ul>
+                            <a href="">Dessert</a>
+                        </ul>
+                        <ul>
+                            <a href="">Veckans lunch</a>
+                        </ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Blogg</a>
+                </li>
+                <li>
+                    <a href="">Beställ</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- First glance Information -->
+        <div class="first-glance-information">
+
+            <!-- Opening hours -->
+            <div class="opening-hours">
+                <h4>Öppettider</h4>
+                <table>
+                    <tr>
+                        <td>Mån-Tors</td>
+                        <td>11.30-21.30</td>
+                    </tr>
+                    <tr>
+                        <td>Fre</td>
+                        <td>11.30-22.00</td>
+                    </tr>
+                    <tr>
+                        <td>Lör</td>
+                        <td>12.00-22.00</td>
+                    </tr>
+                    <tr>
+                        <td>Sön</td>
+                        <td>12.00-20.00</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Contact information -->
+            <div class="contact-information">
+
+                <!-- Address -->
+                <h4>Adress</h4>
+                <table class="address">
+                    <tr>
+                        <td>Norra Järnvägsgatan 6a</td>
+                    </tr>
+                    <tr>
+                        <td>352 33 Växjö</td>
+                    </tr>
+                </table>
+
+                <!-- Telephone -->
+                <h4>Telefon</h4>
+                <table class="telephone">
+                    <tr>
+                        <td>0470-140 50</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
     </header>
 
 
@@ -84,3 +219,5 @@
         <span>&copy Linnea Agetorp, Andreas Lymalm</span>
     </footer>
 </body>
+
+</html>

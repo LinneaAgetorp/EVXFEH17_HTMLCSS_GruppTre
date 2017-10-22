@@ -1,5 +1,15 @@
 @charset "UTF-8";
-/* Justera färgvalen */
+/* Include all utilities */
+/* Variables */
+/* Breakpoint-schema */
+/* Färgschema */
+/* Fontschema */
+/* Mixins */
+/* sass breakpoint mixin */
+/* Custom Fonts */
+/* Google font: Pacifico */
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+/* Helpers */
 /*%btn{
 	width: 200px;
   height: 200px;
@@ -15,6 +25,7 @@ margin: 10px;
 En beställ-knapp kanske?
 
 */
+
 .image {
   position: relative;
   padding: 10px;
@@ -23,6 +34,419 @@ En beställ-knapp kanske?
   border-radius: 5px;
   min-height: 170px; }
 
+
+/* Include all base styles */
+/* Normalize the css */
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
+
+/* Base settings, on whole of site */
+/* Setting on every element */
+* {
+  box-sizing: border-box; }
+
+/* Remove underline on links */
+a {
+  text-decoration: none; }
+
+/* Remove list bullets */
+ul {
+  list-style-type: none; }
+
+ul, li {
+  padding: 0;
+  margin: 0; }
+
+/* Include all layout */
+/* Site layout */
 @media (min-width: 60em) {
   .site {
     display: grid;
@@ -39,6 +463,201 @@ En beställ-knapp kanske?
   .page-foot {
     grid-area: page-foot; } }
 
+/* Include all module style and layout */
+/* Logoptype */
+/* Logo container */
+.container-logo img {
+  /* Remove bottom space */
+  vertical-align: bottom;
+  /* Make the image fill out top screen width */
+  width: 100%; }
+
+/* Tablet styling */
+@media (min-width: 40em) {
+  /* Logo container */
+  .container-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center; } }
+
+/* Hamburger icon */
+/* Checkbox hack */
+#toggle-menu {
+  /* Hide checkbox */
+  display: none;
+  /* Animate hamburger icon when clicked */ }
+  #toggle-menu:checked ~ #container-hamburger-icon {
+    background: black; }
+    #toggle-menu:checked ~ #container-hamburger-icon #hamburger-icon span {
+      background: white; }
+      #toggle-menu:checked ~ #container-hamburger-icon #hamburger-icon span:nth-child(1) {
+        top: 18px;
+        width: 0%;
+        left: 50%; }
+      #toggle-menu:checked ~ #container-hamburger-icon #hamburger-icon span:nth-child(2) {
+        transform: rotate(45deg); }
+      #toggle-menu:checked ~ #container-hamburger-icon #hamburger-icon span:nth-child(3) {
+        transform: rotate(-45deg); }
+      #toggle-menu:checked ~ #container-hamburger-icon #hamburger-icon span:nth-child(4) {
+        top: 18px;
+        width: 0%;
+        left: 50%; }
+
+/* Container which can position the hamburger icon */
+#container-hamburger-icon {
+  padding: 1em;
+  transition: 0.5s ease-in-out; }
+
+/* Style for whole of hamburger icon */
+#hamburger-icon {
+  width: 60px;
+  height: 45px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  /* Common style for hamburger icon layers */ }
+  #hamburger-icon span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: #000000;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+    /* Style for every hamburger layer */ }
+    #hamburger-icon span:nth-child(1) {
+      top: 0px; }
+    #hamburger-icon span:nth-child(2), #hamburger-icon span:nth-child(3) {
+      top: 18px; }
+    #hamburger-icon span:nth-child(4) {
+      top: 36px; }
+
+@media (min-width: 40em) {
+  /* Hide hamburger icon on bigger screens */
+  #container-hamburger-icon {
+    display: none; } }
+
+/* Menu */
+nav {
+  font-family: "Pacifico", cursiv;
+  background: white;
+  line-height: 2em;
+  transition: 0.5s ease-in-out;
+  /* Hide menu as default */ }
+  nav > ul {
+    display: none;
+    position: relative;
+    width: 100%;
+    /* Main menu text */
+    /* Mega menu */
+    /* List item styling */ }
+    nav > ul > li > a {
+      color: gold; }
+    nav > ul .mega-menu {
+      /* Mega menu titles */
+      /* Menu links */ }
+      nav > ul .mega-menu > * > a {
+        color: goldenrod;
+        padding-left: 2em; }
+      nav > ul .mega-menu ul li a {
+        color: whitesmoke;
+        padding-left: 3em; }
+    nav > ul a {
+      display: block;
+      padding-left: 1em; }
+      nav > ul a:hover {
+        background-color: #c21010; }
+
+/* Show full menu if checked checkbox */
+input#toggle-menu:checked ~ nav {
+  background: black; }
+  input#toggle-menu:checked ~ nav > ul {
+    display: block; }
+
+/* Tablet styling */
+@media (min-width: 40em) {
+  nav {
+    background: black;
+    font-size: 1em;
+    /* Make menu flex */
+    /* Megamenu styling */ }
+    nav > ul {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around; }
+      nav > ul > li > a {
+        padding: 15px 25px; }
+    nav a {
+      display: block;
+      transition: 0.2s ease-in-out;
+      /* When hovering over menu item */ }
+      nav a:hover {
+        border-radius: 5px; }
+    nav ul.mega-menu {
+      background: black;
+      opacity: .85;
+      position: absolute;
+      display: flex;
+      flex-flow: row wrap;
+      max-width: 1200px;
+      top: -900px;
+      left: 0;
+      padding: 20px;
+      text-align: left;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      /* The megamenu is divided on three columns */
+      /* Links in mega menu */ }
+      nav ul.mega-menu ul {
+        flex: 1 1 50%;
+        margin-bottom: 20px;
+        color: #000;
+        box-shadow: none; }
+        nav ul.mega-menu ul li a {
+          padding-left: 3em; }
+      nav ul.mega-menu > * > a {
+        padding-left: .5em; }
+    nav ul li:hover ul.mega-menu {
+      top: 100%; } }
+
+/* First glance info = opening hours + contact info */
+/* First glance information */
+.first-glance-information {
+  font-family: "Pacifico", cursiv;
+  padding-bottom: 1em;
+  text-align: center;
+  /* Tables title */
+  /* Make tables centered too */ }
+  .first-glance-information h4 {
+    margin-bottom: .5em; }
+  .first-glance-information table {
+    display: inline; }
+
+/* Opening hours */
+.opening-hours td:nth-child(1) {
+  text-align: left; }
+
+.opening-hours td:nth-child(2) {
+  text-align: right; }
+
+/* Tablet styling */
+@media (min-width: 40em) {
+  /* First glance information */
+  .first-glance-information {
+    border: 10px ridge black;
+    border-radius: 30px;
+    /* Tables title */ }
+    .first-glance-information h4 {
+      margin-bottom: .4em; }
+  /* Opening hours */
+  .opening-hours h4 {
+    margin-bottom: 2em; } }
+
+/* Gallery */
 /* Justerar bilderna i olika breakpoints */
 @media (min-width: 40em) {
   .container-gallery {
@@ -126,3 +745,31 @@ En beställ-knapp kanske?
 .page-foot {
   text-align: center;
   margin: 1em; }
+
+/* Header layout */
+/* Tablet view */
+@media (min-width: 40em) {
+  /* Header */
+  .container-header {
+    /* Layout */
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: auto auto;
+    /* Styling */
+    background: black;
+    box-shadow: 0 4px 2px -2px black;
+    /* Logotype */
+    /* First glance information */
+    /* Menu bar */ }
+    .container-header .container-logo {
+      grid-row: 1/3;
+      grid-column: 1; }
+    .container-header .first-glance-information {
+      grid-row: 1;
+      grid-column: 2;
+      display: flex;
+      justify-content: space-around;
+      background: white; }
+    .container-header .container-menu {
+      grid-row: 2;
+      grid-column: 2; } }

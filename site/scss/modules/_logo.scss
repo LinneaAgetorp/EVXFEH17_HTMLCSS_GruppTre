@@ -1,0 +1,20 @@
+/* Logo container */
+.container-logo {
+
+    img {
+        /* Remove bottom space */
+        vertical-align: bottom;
+        /* Make the image fill out top screen width */
+        width: 100%;
+    }
+}
+
+/* Tablet styling */
+@include respond-to("medium") {
+    /* Logo container */
+    .container-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

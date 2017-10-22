@@ -1,0 +1,119 @@
+nav {
+    font-family: map-get($text, stylish);
+    background: white;
+    line-height: 2em;
+    transition: 0.5s ease-in-out;
+
+    /* Hide menu as default */
+    & > ul {
+        display: none;
+        position: relative;
+        width: 100%;
+
+        /* Main menu text */
+        & > li > a {
+            color: gold;
+        }
+
+        /* Mega menu */
+        .mega-menu {
+            /* Mega menu titles */
+            & > * > a {
+                color: goldenrod;
+                padding-left: 2em;
+            }
+
+            /* Menu links */
+            ul li a {
+                color: whitesmoke;
+                padding-left: 3em;
+            }
+        }
+
+        /* List item styling */
+        a {
+            display: block;
+            padding-left: 1em;
+
+            &:hover {
+                background-color: rgb(194, 16, 16);
+            }
+        }
+    }
+}
+
+/* Show full menu if checked checkbox */
+input#toggle-menu:checked ~ nav {
+    background: black;
+
+    & > ul {
+        display: block;
+    }
+}
+
+/* Tablet styling */
+@include respond-to("medium") {
+    nav {
+        background: black;
+        font-size: 1em;
+
+        /* Make menu flex */
+        & > ul {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+
+            & > li > a {
+                padding: 15px 25px;
+            }
+        }
+
+        a {
+            display: block;
+            transition: 0.2s ease-in-out;
+
+            /* When hovering over menu item */
+            &:hover {
+                border-radius: 5px;
+            }
+        }
+
+        /* Megamenu styling */
+        ul.mega-menu {
+            background: black;
+            opacity: .85;
+            position: absolute;
+            display: flex;
+            flex-flow: row wrap;
+            max-width: 1200px;
+            top: -900px;
+            left: 0;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+
+            /* The megamenu is divided on three columns */
+            ul {
+                flex: 1 1 50%;
+                margin-bottom: 20px;
+                color: #000;
+                box-shadow: none;
+
+                li a {
+                    padding-left: 3em;
+                }
+            }
+
+            /* Links in mega menu */
+            & > * > a {
+                padding-left: .5em;
+            }
+
+        }
+
+        ul li:hover ul.mega-menu {
+            top: 100%;
+        }
+    }
+}
