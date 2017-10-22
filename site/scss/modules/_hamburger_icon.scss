@@ -76,3 +76,10 @@
         }
     }
 }
+
+@include respond-to("medium") {
+    /* Hide hamburger icon on bigger screens */
+    #container-hamburger-icon {
+        display: none;
+    }
+}

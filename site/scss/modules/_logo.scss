@@ -8,3 +8,13 @@
         width: 100%;
     }
 }
+
+/* Tablet styling */
+@include respond-to("medium") {
+    /* Logo container */
+    .container-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

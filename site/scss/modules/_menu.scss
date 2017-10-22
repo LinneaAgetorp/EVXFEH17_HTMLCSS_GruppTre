@@ -54,17 +54,14 @@ input#toggle-menu:checked ~ nav {
 /* Tablet styling */
 @include respond-to("medium") {
     nav {
+        background: black;
         font-size: 1em;
-        box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 1);
 
         /* Make menu flex */
         & > ul {
             display: flex;
             flex-flow: row wrap;
             justify-content: space-around;
-            max-width: 75em;
-            margin: 0 auto;
-            padding: 0;
 
             & > li > a {
                 padding: 15px 25px;
@@ -73,49 +70,49 @@ input#toggle-menu:checked ~ nav {
 
         a {
             display: block;
-        }
+            transition: 0.2s ease-in-out;
 
-        ul li {
-            transition: 0.5s;
+            /* When hovering over menu item */
+            &:hover {
+                border-radius: 5px;
+            }
         }
 
         /* Megamenu styling */
-        ul.megamenu {
+        ul.mega-menu {
+            background: black;
+            opacity: .85;
             position: absolute;
             display: flex;
             flex-flow: row wrap;
             max-width: 1200px;
             top: -900px;
             left: 0;
-            padding: 40px 40px 0 40px;
+            padding: 20px;
             text-align: left;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
             z-index: 1;
 
             /* The megamenu is divided on three columns */
             ul {
-                flex: 1 1 33%;
+                flex: 1 1 50%;
                 margin-bottom: 20px;
                 color: #000;
                 box-shadow: none;
 
-                li {
-                    display: block;
-
-                    a {
-                        margin-top: 0.625em;
-                        transition: 0.5s;
-                        padding-left: 0;
-                    }
+                li a {
+                    padding-left: 3em;
                 }
             }
 
-            h4 {
-                margin-bottom: 1em;
+            /* Links in mega menu */
+            & > * > a {
+                padding-left: .5em;
             }
+
         }
 
-        ul li:hover ul.megamenu {
+        ul li:hover ul.mega-menu {
             top: 100%;
         }
     }
