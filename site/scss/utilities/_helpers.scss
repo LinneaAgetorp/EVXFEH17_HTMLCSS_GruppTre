@@ -10,6 +10,14 @@ margin: 10px;
  font-size:1.5em;
 }
 
-Placeholder, en sorts mall. Skriv en egen placeholder som passar för vår sida.
+En beställ-knapp kanske?
 
 */
+%card-img{
+	position: relative;
+	padding: 10px;
+	margin: 10px;
+	background-color: map-get($colors, main);
+	border-radius: 5px; 
+	min-height: 170px;
+}

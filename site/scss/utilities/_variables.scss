@@ -5,15 +5,17 @@ $breakpoints:(
     "large": (min-width: 60em)
 ) !default;
     
+
 /* Färgschema */
 $color: (
     main: rgb(204, 88, 80),
     bright: rgb(243, 241, 241),
-    dark: rgb(99, 66, 66),
+    medium-grey: rgba(97, 99, 99, 0.7),
+    dark: rgb(99, 66, 66)
 ) !default;
 
 /* Fontschema */
 $text: (
-    body: ("Arial", "sans-serif"),
+    body: unquote("Arial, sans-serif"),
     stylish: ("Pacifico", cursiv)
 )
