@@ -1,25 +1,29 @@
 /*  ---- Mobile first / Fallback "grid-image"-----  */
 
-.container-img{
-    background-image: url(https://images.pexels.com/photos/259763/pexels-photo-259763.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
-    overflow: hidden;
-    @include respond-to("medium"){ //desktop grid-image
-        height: 1000px;
-        width: auto;
-    }
+.site{
+    background-color: map-get($colors, main);
 }
 
 
-@supports (grid-area: auto){
+@supports (display: grid){
+    .site{
+        background-color: white;
+    }
+    .container-img{
     
+    @include bg-img();
+    height: 500px;
+    @include respond-to("medium"){ //desktop grid-image
+        width: auto;
+    }
+
+    }
     
     .container-img{
         display: grid;
         grid-template-columns: repeat(10, 1fr);
         grid-template-rows: repeat(10, 1fr);
+        height: 1000px;
     }
 
     $i:1; 
