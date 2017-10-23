@@ -505,7 +505,9 @@ ul, li {
   margin: 1em; }
 
 /* Logoptype */
-/* Logo container */
+#desktop-logo {
+  display: none; }
+
 .container-logo img {
   /* Remove bottom space */
   vertical-align: bottom;
@@ -514,17 +516,20 @@ ul, li {
 
 /* Tablet styling */
 @media (min-width: 40em) {
-  /* Logo container */
+  #standard-logo {
+    display: flex; }
   .container-logo {
-    display: flex;
     align-items: center;
     justify-content: center; } }
 
 @supports (grid-area: auto) {
   /* Desktop styling */
   @media (min-width: 60em) {
+    #standard-logo {
+      display: none; }
     /* Logo container */
-    .container-logo {
+    #desktop-logo {
+      display: flex;
       /* Size */
       width: 280px;
       height: 280px;
@@ -535,9 +540,10 @@ ul, li {
       transform: rotate(-20deg);
       z-index: 1;
       /* Position logo */
-      position: relative;
-      top: 400px;
-      left: -140px; } } }
+      grid-column: 1/3;
+      grid-row: 2/3;
+      justify-self: center;
+      align-self: center; } } }
 
 /* Hamburger icon */
 /* Checkbox hack */

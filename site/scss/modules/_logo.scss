@@ -1,6 +1,8 @@
-/* Logo container */
-.container-logo {
+#desktop-logo {
+    display: none;
+}
 
+.container-logo {
     img {
         /* Remove bottom space */
         vertical-align: bottom;
@@ -11,9 +13,11 @@
 
 /* Tablet styling */
 @include respond-to("medium") {
-    /* Logo container */
-    .container-logo {
+    #standard-logo{
         display: flex;
+    }
+
+    .container-logo {
         align-items: center;
         justify-content: center;
     }
@@ -22,24 +26,36 @@
 @supports (grid-area: auto) {
     /* Desktop styling */
     @include respond-to("large") {
+        #standard-logo {
+            display: none;
+        }
+
         /* Logo container */
-        .container-logo {
+        #desktop-logo {
+            display: flex;
+            
             /* Size */
             $side: 280px;
             width: $side;
             height: $side;
-
+            
+            
             background: black;
             border: 10px solid map-get($colors, main2);
             border-radius: $side/2;
             padding: 1em;
             transform: rotate(-20deg);
             z-index: 1;
-            
+
             /* Position logo */
-            position: relative;
-            top: 400px;
-            left: -$side/2;
+            grid-column: 1/3;
+            grid-row: 2/3;
+            justify-self: center;
+            align-self: center;
+
+            img {
+                
+            }
         }
     }
 }
