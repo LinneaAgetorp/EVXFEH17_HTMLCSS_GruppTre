@@ -1,15 +1,19 @@
 //Justerar layout i största breakpointen
+
+
+@supports (grid-area: auto){
+    
 @include respond-to("large"){ 
     .site{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 400px) 100px;
+    grid-template-rows: 270px auto 50px;
     grid-template-areas: "img head head" "img gallery gallery" "img gallery gallery" ". page-foot .";
     }
 
     .container-header{
     grid-area: head;
-    height: 300px;
+    height: auto;
     }
 
     .container-img{
@@ -24,6 +28,7 @@
     .page-foot{
     grid-area: page-foot;
     }
+    }   
 }
 
 

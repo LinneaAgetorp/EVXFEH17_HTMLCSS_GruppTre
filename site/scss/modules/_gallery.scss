@@ -1,14 +1,26 @@
 
 /* Justerar bilderna i olika breakpoints */
-.container-gallery{
-    @include respond-to("medium"){
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+@supports (grid-area: auto){
+    .container-gallery{
+        
+        @include respond-to("medium"){
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .image:nth-child(2){
+        grid-row: span 2;
+        grid-column: span 2;
+        }
     }
 }
+/* Fallback för bilderna */
+
 
 .image{
     @extend %card-img;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
     @include respond-to("medium"){
         background-color: white;
         border: 2px solid rgb(173, 172, 172);
@@ -20,10 +32,7 @@
     }
 }
 
-.image:nth-child(2){
-    grid-row: span 2;
-    grid-column: span 2;
-}
+
 
 .caption {
     position: absolute;
