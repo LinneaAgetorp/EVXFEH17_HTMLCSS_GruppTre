@@ -5,6 +5,7 @@
             display: grid;
             margin-top: 10px;
             grid-template-columns: repeat(3, 1fr);
+            grid-gap: 5px;
         }
         .image:nth-child(2) {
             grid-row: span 2;
@@ -23,9 +24,10 @@
         background-color: white;
         border: 2px solid rgb(173, 172, 172);
     }
+    
     img {
         width: 100%;
-        height: auto;
+        height: 100%;
         min-height: 140px;
     }
 }

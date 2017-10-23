@@ -1,32 +1,32 @@
-/*  ---- Mobile first / Fallback "grid-image"-----  */
-
+/*  ---- Mobile first / Fallback -----  */
 .site{
     background-color: map-get($colors, main);
 }
-
+.container-img{ //smallest-size + fallback grid-image
+    @include bg-img();
+    height: 300px;
+}
 
 @supports (display: grid){
     .site{
         background-color: white;
     }
-    .container-img{
     
-    @include bg-img();
-    height: 500px;
-    @include respond-to("medium"){ //desktop grid-image
+    .container-img{
+    @include respond-to("medium"){ //medium-size grid-image
         width: auto;
+        height: 500px;
     }
-
-    }
-    
-    .container-img{
+    @include respond-to("large"){//large-size grid-image
+        height: 1000px;
+        }
+        //Container-img grid-styling:
         display: grid;
         grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: repeat(10, 1fr);
-        height: 1000px;
+        grid-template-rows: repeat(10, 1fr);   
     }
 
-    $i:1; 
+    $i:1; //Sätter värdet på variabeln i till 1, som ökar med 1 efter varje grid-item nedanför
 
     .grid-item{
         opacity: 0.6;
