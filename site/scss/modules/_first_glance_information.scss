@@ -3,6 +3,10 @@
     font-family: map-get($text, stylish);
     padding-bottom: 1em;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: white;
 
     /* Tables title */
     h4 {
@@ -31,7 +35,8 @@
 
     /* First glance information */
     .first-glance-information {
-        border: 10px ridge black;
+        flex-direction: row;
+        border: 10px solid black;
         border-radius: 30px;
 
         /* Tables title */
@@ -47,3 +52,25 @@
         }
     }
 }
+
+/* Desktop styling */
+@include respond-to("large") {
+
+    /* First glance information */
+    .first-glance-information {
+        margin: 30px 30px 0px;
+
+        /* Tables title */
+        h4 {
+            margin-bottom: .4em;
+        }
+    }
+
+    /* Opening hours */
+    .opening-hours {
+        h4 {
+            margin-bottom: 2em;
+        }
+    }
+}
+

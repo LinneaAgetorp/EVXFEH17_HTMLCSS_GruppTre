@@ -14,6 +14,7 @@
   position: relative;
   padding: 10px;
   margin: 10px;
+  background-color: goldenrod;
   border-radius: 5px; }
 
 /* Include all base styles */
@@ -433,11 +434,11 @@ ul, li {
     .site {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 270px auto 50px;
-      grid-template-areas: "img head head" "img gallery gallery" "img gallery gallery" ". page-foot ."; }
+      grid-template-rows: 300px auto 50px;
+      grid-template-areas: "img head head" "img gallery gallery" "img gallery gallery" ". page-foot ."; }
     .container-header {
       grid-area: head;
-      height: auto; }
+      align-self: start; }
     .container-img {
       grid-area: img; }
     .container-gallery {
@@ -519,6 +520,25 @@ ul, li {
     align-items: center;
     justify-content: center; } }
 
+@supports (grid-area: auto) {
+  /* Desktop styling */
+  @media (min-width: 60em) {
+    /* Logo container */
+    .container-logo {
+      /* Size */
+      width: 280px;
+      height: 280px;
+      background: black;
+      border: 10px solid goldenrod;
+      border-radius: 140px;
+      padding: 1em;
+      transform: rotate(-20deg);
+      z-index: 1;
+      /* Position logo */
+      position: relative;
+      top: 400px;
+      left: -140px; } } }
+
 /* Hamburger icon */
 /* Checkbox hack */
 #toggle-menu {
@@ -544,6 +564,7 @@ ul, li {
 
 /* Container which can position the hamburger icon */
 #container-hamburger-icon {
+  background: goldenrod;
   padding: 1em;
   transition: 0.5s ease-in-out; }
 
@@ -595,12 +616,12 @@ nav {
     /* Mega menu */
     /* List item styling */ }
     nav > ul > li > a {
-      color: gold; }
+      color: goldenrod; }
     nav > ul .mega-menu {
       /* Mega menu titles */
       /* Menu links */ }
       nav > ul .mega-menu > * > a {
-        color: goldenrod;
+        color: gold;
         padding-left: 2em; }
       nav > ul .mega-menu ul li a {
         color: whitesmoke;
@@ -617,6 +638,7 @@ input#toggle-menu:checked ~ nav {
   input#toggle-menu:checked ~ nav > ul {
     display: block; }
 
+/* Megamenu variables */
 /* Tablet styling */
 @media (min-width: 40em) {
   nav {
@@ -638,30 +660,46 @@ input#toggle-menu:checked ~ nav {
         border-radius: 5px; }
     nav ul.mega-menu {
       background: black;
-      opacity: .85;
+      opacity: 0.85;
       position: absolute;
       display: flex;
       flex-flow: row wrap;
       max-width: 1200px;
-      top: -900px;
+      top: -1000px;
       left: 0;
       padding: 20px;
       text-align: left;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
       z-index: 1;
-      /* The megamenu is divided on three columns */
+      /* The megamenu is divided on two columns */
       /* Links in mega menu */ }
       nav ul.mega-menu ul {
         flex: 1 1 50%;
-        margin-bottom: 20px;
-        color: #000;
+        margin-bottom: 1em;
+        color: black;
         box-shadow: none; }
         nav ul.mega-menu ul li a {
           padding-left: 3em; }
       nav ul.mega-menu > * > a {
-        padding-left: .5em; }
+        padding-left: 0.5em; }
     nav ul li:hover ul.mega-menu {
       top: 100%; } }
+
+/* Desktop styling */
+@media (min-width: 80em) {
+  nav > ul {
+    justify-content: center; }
+    nav > ul > li {
+      position: relative; }
+      nav > ul > li .mega-menu {
+        width: 540px;
+        /* The megamenu is divided on two columns */ }
+        nav > ul > li .mega-menu ul {
+          flex: 0 1 auto; }
+          nav > ul > li .mega-menu ul:nth-child(2n + 1) {
+            width: 200px; }
+          nav > ul > li .mega-menu ul:nth-child(2n) {
+            width: 300px; } }
 
 /* First glance info = opening hours + contact info */
 /* First glance information */
@@ -669,6 +707,10 @@ input#toggle-menu:checked ~ nav {
   font-family: "Pacifico", cursiv;
   padding-bottom: 1em;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: white;
   /* Tables title */
   /* Make tables centered too */ }
   .first-glance-information h4 {
@@ -687,8 +729,21 @@ input#toggle-menu:checked ~ nav {
 @media (min-width: 40em) {
   /* First glance information */
   .first-glance-information {
-    border: 10px ridge black;
+    flex-direction: row;
+    border: 10px solid black;
     border-radius: 30px;
+    /* Tables title */ }
+    .first-glance-information h4 {
+      margin-bottom: .4em; }
+  /* Opening hours */
+  .opening-hours h4 {
+    margin-bottom: 2em; } }
+
+/* Desktop styling */
+@media (min-width: 60em) {
+  /* First glance information */
+  .first-glance-information {
+    margin: 30px 30px 0px;
     /* Tables title */ }
     .first-glance-information h4 {
       margin-bottom: .4em; }
@@ -702,6 +757,7 @@ input#toggle-menu:checked ~ nav {
   @media (min-width: 40em) {
     .container-gallery {
       display: grid;
+      margin-top: 10px;
       grid-template-columns: repeat(3, 1fr); } }
   .container-gallery .image:nth-child(2) {
     grid-row: span 2;
@@ -711,7 +767,7 @@ input#toggle-menu:checked ~ nav {
 .image {
   max-width: 500px;
   height: auto;
-  margin: 0 auto; }
+  margin: 5px auto; }
   @media (min-width: 40em) {
     .image {
       background-color: white;
@@ -737,8 +793,18 @@ input#toggle-menu:checked ~ nav {
     font-family: Arial, sans-serif; }
 
 /* Header layout */
-/* Tablet view */
+/* Fallback code if grids are not supported */
+.container-header {
+  /* Tablet view */ }
+  @media (min-width: 40em) {
+    .container-header {
+      /* Styling */
+      background: black;
+      box-shadow: 0 4px 2px -2px black; } }
+
+/* Use grids if supported */
 @supports (grid-area: auto) {
+  /* Tablet view */
   @media (min-width: 40em) {
     /* Header */
     .container-header {
@@ -746,9 +812,6 @@ input#toggle-menu:checked ~ nav {
       display: grid;
       grid-template-columns: 240px 1fr;
       grid-template-rows: auto auto;
-      /* Styling */
-      background: black;
-      box-shadow: 0 4px 2px -2px black;
       /* Logotype */
       /* First glance information */
       /* Menu bar */ }
@@ -757,10 +820,22 @@ input#toggle-menu:checked ~ nav {
         grid-column: 1; }
       .container-header .first-glance-information {
         grid-row: 1;
-        grid-column: 2;
-        display: flex;
-        justify-content: space-around;
-        background: white; }
+        grid-column: 2; }
       .container-header .container-menu {
         grid-row: 2;
-        grid-column: 2; } } }
+        grid-column: 2; } }
+  /* Desktop view */
+  @media (min-width: 60em) {
+    /* Header */
+    .container-header {
+      /* Layout */
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      /* First glance information */
+      /* Menu bar */ }
+      .container-header .first-glance-information {
+        grid-row: 1;
+        grid-column: 1; }
+      .container-header .container-menu {
+        grid-row: 2;
+        grid-column: 1; } } }

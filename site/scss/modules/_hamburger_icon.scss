@@ -35,6 +35,7 @@
 
 /* Container which can position the hamburger icon */
 #container-hamburger-icon {
+    background: map-get($colors, main2);
     padding: 1em;
     transition: 0.5s ease-in-out;
 }

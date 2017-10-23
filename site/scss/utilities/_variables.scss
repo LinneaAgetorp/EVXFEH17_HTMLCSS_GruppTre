@@ -2,16 +2,21 @@
 $breakpoints:(
     "small": (min-width: 30em),
     "medium": (min-width: 40em),
-    "large": (min-width: 60em)
+    "large": (min-width: 60em),
+    "huge": (min-width: 80em)
 ) !default;
     
 
 /* Färgschema */
 $colors: (
     main: rgb(204, 88, 80),
+    main2: goldenrod,
+    main3: gold,
     bright: rgb(243, 241, 241),
     medium-grey: rgba(97, 99, 99, 0.7),
-    dark: rgb(99, 66, 66)
+    dark: rgb(99, 66, 66),
+    select: rgb(194, 16, 16)
+
 ) !default;
 
 /* Fontschema */

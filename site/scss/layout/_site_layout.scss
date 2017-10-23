@@ -1,35 +1,30 @@
 //Justerar layout i största breakpointen
 
+@supports (grid-area: auto) {
+    @include respond-to("large") {
+        .site {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 300px auto 50px;
+            grid-template-areas: "img head head" "img gallery gallery"
+                "img gallery gallery" ". page-foot .";
+        }
 
-@supports (grid-area: auto){
-    
-@include respond-to("large"){ 
-    .site{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 270px auto 50px;
-    grid-template-areas: "img head head" "img gallery gallery" "img gallery gallery" ". page-foot .";
+        .container-header {
+            grid-area: head;
+            align-self: start;
+        }
+
+        .container-img {
+            grid-area: img;
+        }
+
+        .container-gallery {
+            grid-area: gallery;
+        }
+
+        .page-foot {
+            grid-area: page-foot;
+        }
     }
-
-    .container-header{
-    grid-area: head;
-    height: auto;
-    }
-
-    .container-img{
-    grid-area: img;
-    }
-
-    .container-gallery{
-    grid-area: gallery;
-    }
-
-
-    .page-foot{
-    grid-area: page-foot;
-    }
-    }   
 }
-
-
-

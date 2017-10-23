@@ -18,3 +18,28 @@
         justify-content: center;
     }
 }
+
+@supports (grid-area: auto) {
+    /* Desktop styling */
+    @include respond-to("large") {
+        /* Logo container */
+        .container-logo {
+            /* Size */
+            $side: 280px;
+            width: $side;
+            height: $side;
+
+            background: black;
+            border: 10px solid map-get($colors, main2);
+            border-radius: $side/2;
+            padding: 1em;
+            transform: rotate(-20deg);
+            z-index: 1;
+            
+            /* Position logo */
+            position: relative;
+            top: 400px;
+            left: -$side/2;
+        }
+    }
+}

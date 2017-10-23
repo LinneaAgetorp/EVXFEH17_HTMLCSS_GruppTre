@@ -1,38 +1,34 @@
-
 /* Justerar bilderna i olika breakpoints */
-@supports (grid-area: auto){
-    .container-gallery{
-        
-        @include respond-to("medium"){
+@supports (grid-area: auto) {
+    .container-gallery {
+        @include respond-to("medium") {
             display: grid;
+            margin-top: 10px;
             grid-template-columns: repeat(3, 1fr);
         }
-        .image:nth-child(2){
-        grid-row: span 2;
-        grid-column: span 2;
+        .image:nth-child(2) {
+            grid-row: span 2;
+            grid-column: span 2;
         }
     }
 }
 /* Fallback för bilderna */
 
-
-.image{
+.image {
     @extend %card-img;
     max-width: 500px;
     height: auto;
-    margin: 0 auto;
-    @include respond-to("medium"){
+    margin: 5px auto;
+    @include respond-to("medium") {
         background-color: white;
         border: 2px solid rgb(173, 172, 172);
     }
-    img{
+    img {
         width: 100%;
         height: auto;
         min-height: 140px;
     }
 }
-
-
 
 .caption {
     position: absolute;
@@ -41,23 +37,13 @@
     padding: 0.5em;
     margin: 0;
     width: 85%;
-    @include respond-to("medium"){
+    @include respond-to("medium") {
         width: 78%;
     }
-        
-    p{
+
+    p {
         padding: 0;
         margin: 0;
         font-family: map-get($text, body);
     }
 }
-
-
-
-
-
-
-
-
-
-

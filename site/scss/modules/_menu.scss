@@ -12,14 +12,14 @@ nav {
 
         /* Main menu text */
         & > li > a {
-            color: gold;
+            color: map-get($colors, main2);
         }
 
         /* Mega menu */
         .mega-menu {
             /* Mega menu titles */
             & > * > a {
-                color: goldenrod;
+                color: map-get($colors, main3);
                 padding-left: 2em;
             }
 
@@ -36,7 +36,7 @@ nav {
             padding-left: 1em;
 
             &:hover {
-                background-color: rgb(194, 16, 16);
+                background-color: map-get($colors, select);
             }
         }
     }
@@ -50,6 +50,11 @@ input#toggle-menu:checked ~ nav {
         display: block;
     }
 }
+
+/* Megamenu variables */
+$mmcol1width: 200px;
+$mmcol2width: 300px;
+$mmpadding: 20px;
 
 /* Tablet styling */
 @include respond-to("medium") {
@@ -81,23 +86,23 @@ input#toggle-menu:checked ~ nav {
         /* Megamenu styling */
         ul.mega-menu {
             background: black;
-            opacity: .85;
+            opacity: 0.85;
             position: absolute;
             display: flex;
             flex-flow: row wrap;
             max-width: 1200px;
-            top: -900px;
+            top: -1000px;
             left: 0;
-            padding: 20px;
+            padding: $mmpadding;
             text-align: left;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
             z-index: 1;
 
-            /* The megamenu is divided on three columns */
+            /* The megamenu is divided on two columns */
             ul {
                 flex: 1 1 50%;
-                margin-bottom: 20px;
-                color: #000;
+                margin-bottom: 1em;
+                color: black;
                 box-shadow: none;
 
                 li a {
@@ -107,13 +112,40 @@ input#toggle-menu:checked ~ nav {
 
             /* Links in mega menu */
             & > * > a {
-                padding-left: .5em;
+                padding-left: 0.5em;
             }
-
         }
 
         ul li:hover ul.mega-menu {
             top: 100%;
+        }
+    }
+}
+
+/* Desktop styling */
+@include respond-to("huge") {
+    nav > ul {
+        justify-content: center;
+
+        & > li {
+            position: relative;
+
+            .mega-menu {
+                width: $mmcol1width + $mmcol2width + 2*$mmpadding;
+
+                /* The megamenu is divided on two columns */
+                ul {
+                    flex: 0 1 auto;
+
+                    &:nth-child(2n + 1) {
+                        width: $mmcol1width;
+                    }
+
+                    &:nth-child(2n) {
+                        width: $mmcol2width;
+                    }
+                }
+            }
         }
     }
 }
