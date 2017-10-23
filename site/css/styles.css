@@ -435,7 +435,7 @@ ul, li {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: 300px auto 50px;
-      grid-template-areas: "img head head" "img gallery gallery" "img gallery gallery" ". page-foot ."; }
+      grid-template-areas: "img head head" "img gallery gallery" "img gallery gallery" ". page-foot ."; }
     .container-header {
       grid-area: head;
       align-self: start; }
@@ -447,27 +447,31 @@ ul, li {
       grid-area: page-foot; } } }
 
 /* Include all module style and layout */
-/*  ---- Mobile first / Fallback "grid-image"-----  */
+/*  ---- Mobile first / Fallback -----  */
 .site {
   background-color: #cc5850; }
+
+.container-img {
+  background-image: url(https://images.pexels.com/photos/259763/pexels-photo-259763.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 300px; }
 
 @supports (display: grid) {
   .site {
     background-color: white; }
   .container-img {
-    background-image: url(https://images.pexels.com/photos/259763/pexels-photo-259763.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    height: 500px; }
-    @media (min-width: 40em) {
-      .container-img {
-        width: auto; } }
-  .container-img {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    height: 1000px; }
+    grid-template-rows: repeat(10, 1fr); }
+    @media (min-width: 40em) {
+      .container-img {
+        width: auto;
+        height: 500px; } }
+    @media (min-width: 60em) {
+      .container-img {
+        height: 1000px; } }
   .grid-item {
     opacity: 0.6; }
   .grid-item:nth-child(1) {
@@ -764,7 +768,8 @@ input#toggle-menu:checked ~ nav {
     .container-gallery {
       display: grid;
       margin-top: 10px;
-      grid-template-columns: repeat(3, 1fr); } }
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 5px; } }
   .container-gallery .image:nth-child(2) {
     grid-row: span 2;
     grid-column: span 2; } }
@@ -780,7 +785,7 @@ input#toggle-menu:checked ~ nav {
       border: 2px solid #adacac; } }
   .image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     min-height: 140px; }
 
 .caption {
