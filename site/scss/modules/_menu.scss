@@ -51,11 +51,6 @@ input#toggle-menu:checked ~ nav {
     }
 }
 
-/* Megamenu variables */
-$mmcol1width: 200px;
-$mmcol2width: 300px;
-$mmpadding: 20px;
-
 /* Tablet styling */
 @include respond-to("medium") {
     nav {
@@ -68,19 +63,16 @@ $mmpadding: 20px;
             flex-flow: row wrap;
             justify-content: space-around;
 
+            /* Main menu text */
             & > li > a {
                 padding: 15px 25px;
             }
         }
 
         a {
-            display: block;
+            /* Hover-effect on select color */
             transition: 0.2s ease-in-out;
-
-            /* When hovering over menu item */
-            &:hover {
-                border-radius: 5px;
-            }
+            border-radius: 5px;
         }
 
         /* Megamenu styling */
@@ -96,26 +88,25 @@ $mmpadding: 20px;
             padding: $mmpadding;
             text-align: left;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-            z-index: 1;
+            z-index: 2;
 
-            /* The megamenu is divided on two columns */
+            /* The megamenu is divided on two columns width equal size */
             ul {
                 flex: 1 1 50%;
                 margin-bottom: 1em;
-                color: black;
-                box-shadow: none;
 
                 li a {
                     padding-left: 3em;
                 }
             }
 
-            /* Links in mega menu */
+            /* Mega menu titles */
             & > * > a {
                 padding-left: 0.5em;
             }
         }
 
+        /* Show mega menu when hovering */
         ul li:hover ul.mega-menu {
             top: 100%;
         }
@@ -127,13 +118,14 @@ $mmpadding: 20px;
     nav > ul {
         justify-content: center;
 
+        /* Put mega menu just below parent */
         & > li {
             position: relative;
 
             .mega-menu {
                 width: $mmcol1width + $mmcol2width + 2*$mmpadding;
 
-                /* The megamenu is divided on two columns */
+                /* Make fix width columns in mega menu instead of 50% */
                 ul {
                     flex: 0 1 auto;
 

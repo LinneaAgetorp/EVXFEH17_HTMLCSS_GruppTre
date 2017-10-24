@@ -45,21 +45,16 @@
     width: 60px;
     height: 45px;
     position: relative;
-    transform: rotate(0deg);
-    transition: 0.5s ease-in-out;
     cursor: pointer;
 
     /* Common style for hamburger icon layers */
     span {
-        display: block;
         position: absolute;
         height: 9px;
         width: 100%;
-        background: #000000;
+        background: black;
         border-radius: 9px;
-        opacity: 1;
         left: 0;
-        transform: rotate(0deg);
         transition: 0.25s ease-in-out;
 
         /* Style for every hamburger layer */
