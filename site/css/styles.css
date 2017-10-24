@@ -444,7 +444,7 @@ ul, li {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: 300px auto 50px;
-      grid-template-areas: "img head head" "img gallery gallery" "img gallery gallery" ". page-foot ."; }
+      grid-template-areas: "img head head" "img gallery gallery" ". page-foot ."; }
     .container-header {
       grid-area: head;
       align-self: start; }

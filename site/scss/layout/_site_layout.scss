@@ -7,7 +7,7 @@
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 300px auto 50px;
             grid-template-areas: "img head head" "img gallery gallery"
-                "img gallery gallery" ". page-foot .";
+             ". page-foot .";
         }
 
         .container-header {
