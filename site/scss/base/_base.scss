@@ -3,6 +3,19 @@
     box-sizing: border-box;
 }
 
+/*  ---- Fallback background-color-----  */
+.site{
+    background-color: map-get($colors, main);
+}
+
+@supports (display: grid){ 
+    .site{
+        background-color: white;
+    }
+    
+}
+
+
 /* Remove underline on links */
 a {
     text-decoration: none;

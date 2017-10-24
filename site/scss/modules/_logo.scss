@@ -34,15 +34,8 @@
         #desktop-logo {
             display: flex;
             
-            /* Size */
-            $side: 280px;
-            width: $side;
-            height: $side;
-            
-            
-            background: black;
-            border: 10px solid map-get($colors, main2);
-            border-radius: $side/2;
+            @include make-circle(280px);
+            border: 10px solid map-get($colors, main2);            
             padding: 1em;
             transform: rotate(-20deg);
             z-index: 1;
@@ -53,9 +46,6 @@
             justify-self: center;
             align-self: center;
 
-            img {
-                
-            }
         }
     }
 }

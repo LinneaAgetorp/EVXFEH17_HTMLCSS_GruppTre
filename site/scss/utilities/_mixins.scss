@@ -14,6 +14,7 @@
     }
 }
 
+/*Mixin för bakgrunden till grid-image */
 @mixin bg-img($background-repeat:no-repeat, $background-size:cover, $overflow:hidden){
     background-image: url(https://images.pexels.com/photos/259763/pexels-photo-259763.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
     background-repeat: $background-repeat;
@@ -22,6 +23,12 @@
 }
 
 
+@mixin make-circle($circle-size, $circle-color: black){
+	border-radius: 50%;
+	width: $circle-size;
+	height: $circle-size;
+	background-color: $circle-color;
+}
 
 
 

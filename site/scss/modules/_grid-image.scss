@@ -1,16 +1,11 @@
-/*  ---- Mobile first / Fallback -----  */
-.site{
-    background-color: map-get($colors, main);
-}
+
+
 .container-img{ //smallest-size + fallback grid-image
     @include bg-img();
     height: 300px;
 }
 
 @supports (display: grid){
-    .site{
-        background-color: white;
-    }
     
     .container-img{
     @include respond-to("medium"){ //medium-size grid-image
@@ -38,7 +33,6 @@
         background-color: orange;
     }
     $i:$i+1;
-
     .grid-item:nth-child(#{$i}){
         grid-column: 5/7;
         grid-row: 1/4;

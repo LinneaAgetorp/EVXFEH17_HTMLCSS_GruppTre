@@ -13,15 +13,16 @@
         }
     }
 }
-/* Fallback för bilderna */
+
+
 
 .image {
     @extend %card-img;
-    max-width: 500px;
+    max-width: 500px; /* Maxbredd 500px = Fallback för bilderna */
     height: auto;
     margin: 5px auto;
     @include respond-to("medium") {
-        background-color: white;
+        background-color: map-get($colors, bright);
         border: 2px solid rgb(173, 172, 172);
     }
     
@@ -33,7 +34,7 @@
 }
 
 .caption {
-    position: absolute;
+    position: absolute; //Gör att texten hamnar ovanpå bilden
     color: white;
     background-color: map-get($colors, medium-grey);
     padding: 0.5em;

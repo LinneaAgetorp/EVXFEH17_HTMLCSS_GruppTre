@@ -6,6 +6,7 @@
 /* Fontschema */
 /* Mixins */
 /* sass breakpoint mixin */
+/*Mixin för bakgrunden till grid-image */
 /* Custom Fonts */
 /* Google font: Pacifico */
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
@@ -415,6 +416,14 @@ template {
 * {
   box-sizing: border-box; }
 
+/*  ---- Fallback background-color-----  */
+.site {
+  background-color: #cc5850; }
+
+@supports (display: grid) {
+  .site {
+    background-color: white; } }
+
 /* Remove underline on links */
 a {
   text-decoration: none; }
@@ -447,10 +456,6 @@ ul, li {
       grid-area: page-foot; } } }
 
 /* Include all module style and layout */
-/*  ---- Mobile first / Fallback -----  */
-.site {
-  background-color: #cc5850; }
-
 .container-img {
   background-image: url(https://images.pexels.com/photos/259763/pexels-photo-259763.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
   background-repeat: no-repeat;
@@ -459,8 +464,6 @@ ul, li {
   height: 300px; }
 
 @supports (display: grid) {
-  .site {
-    background-color: white; }
   .container-img {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -534,12 +537,11 @@ ul, li {
     /* Logo container */
     #desktop-logo {
       display: flex;
-      /* Size */
+      border-radius: 50%;
       width: 280px;
       height: 280px;
-      background: black;
+      background-color: black;
       border: 10px solid goldenrod;
-      border-radius: 140px;
       padding: 1em;
       transform: rotate(-20deg);
       z-index: 1;
@@ -774,14 +776,14 @@ input#toggle-menu:checked ~ nav {
     grid-row: span 2;
     grid-column: span 2; } }
 
-/* Fallback för bilderna */
 .image {
   max-width: 500px;
+  /* Maxbredd 500px = Fallback för bilderna */
   height: auto;
   margin: 5px auto; }
   @media (min-width: 40em) {
     .image {
-      background-color: white;
+      background-color: #f3f1f1;
       border: 2px solid #adacac; } }
   .image img {
     width: 100%;
